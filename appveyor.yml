@@ -1,6 +1,14 @@
 version: 1.0-SNAPSHOT
 image: Visual Studio 2017
 
+clone_folder: c:\projects\hellojava
+
 build_script:
-  mvn --version
-  mvn package
+- cmd: >-
+    cd c:\projects\hellojava
+    mvn --version
+    mvn package
+
+artifacts:
+- path: target\*.jar
+  name: JAR
