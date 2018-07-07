@@ -4,10 +4,13 @@ image: Visual Studio 2017
 clone_folder: c:\projects\hellojava
 
 build_script:
-- cmd:
+- cmd: >-
     cd c:\projects\hellojava
+
     mvn --version
+
     mvn package
+
 
 artifacts:
 - path: target\*.jar
