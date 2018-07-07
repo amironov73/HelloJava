@@ -1,0 +1,6 @@
+version: 1.0-SNAPSHOT
+image: Visual Studio 2017
+
+build_script:
+  mvn --version
+  mvn package
