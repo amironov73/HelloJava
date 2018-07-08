@@ -1,21 +1,21 @@
 package ru.arsmagna.hello;
 
-import org.junit.jupiter.api.*;
+import org.junit.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class CalculatorTest
+public final class CalculatorTest
 {
-    Calculator calculator;
+    private Calculator calculator;
 
-    @BeforeEach
-    void setUp()
+    @Before
+    public final void setUp()
     {
-        Calculator calculator = new Calculator();
+        calculator = new Calculator();
     }
 
     @Test
-    void add()
+    public final void add()
     {
         int actual = calculator.add(2, 3);
         int expected = 5;
@@ -23,7 +23,7 @@ class CalculatorTest
     }
 
     @Test
-    void subtract()
+    public final void subtract()
     {
         int actual = calculator.subtract(2, 3);
         int expected = -1;
@@ -31,7 +31,7 @@ class CalculatorTest
     }
 
     @Test
-    void multiply()
+    public final void multiply()
     {
         int actual = calculator.multiply(2, 3);
         int expected = 6;
@@ -39,7 +39,7 @@ class CalculatorTest
     }
 
     @Test
-    void divide()
+    public final void divide()
     {
         int actual = calculator.divide(2, 3);
         int expected = 0;
