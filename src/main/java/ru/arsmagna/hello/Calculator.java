@@ -1,12 +1,12 @@
 package ru.arsmagna.hello;
 
-import org.jetbrains.annotations.*;
+import org.jetbrains.annotations.Contract;
 
 /**
  * Sample class that can add, subtract, multiply, and divide integers.
  */
-public final class Calculator
-{
+@SuppressWarnings("WeakerAccess")
+public final class Calculator {
     /**
      * Addition of two integers.
      *
@@ -15,8 +15,7 @@ public final class Calculator
      * @return Sum.
      */
     @Contract(pure = true)
-    public final int add(int first, int second)
-    {
+    public int add(final int first, final int second) {
         return first + second;
     }
 
@@ -28,8 +27,7 @@ public final class Calculator
      * @return Difference.
      */
     @Contract(pure = true)
-    public final int subtract(int first, int second)
-    {
+    public int subtract(final int first, final int second) {
         return first - second;
     }
 
@@ -41,8 +39,7 @@ public final class Calculator
      * @return Product.
      */
     @Contract(pure = true)
-    public final int multiply(int first, int second)
-    {
+    public int multiply(final int first, final int second) {
         return first * second;
     }
 
@@ -54,8 +51,7 @@ public final class Calculator
      * @return Quotient.
      */
     @Contract(pure = true)
-    public final int divide(int first, int second)
-    {
+    public int divide(final int first, final int second) {
         return first / second;
     }
 }
